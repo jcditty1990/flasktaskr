@@ -1,8 +1,10 @@
-# project/views.py
+# project/views.py page 120
 
 
 import sqlite3
 from functools import wraps
+
+from forms import AddTaskForm
 
 from flask import Flask, flash, redirect, render_template, \
 request, session, url_for, g
@@ -26,7 +28,7 @@ def login_required(test):
 		else:
 			flash('You need to login first.')
 			return redirect(url_for('login'))
-		return wrap
+	return wrap
 
 
 # Add new tasks
